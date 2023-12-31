@@ -15,3 +15,9 @@ def team(request):
 
 def gallery(request):
 	return render(request,'gallery.html')
+
+def blogdetail(request):
+	return render(request,'blogdetail.html')
+
+def bloggrid(request):
+	return render(request,'bloggrid.html')

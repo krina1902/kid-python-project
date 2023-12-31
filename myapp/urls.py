@@ -7,4 +7,6 @@ urlpatterns = [
     path('class',views.classes,name='class'),
     path('team',views.team,name='team'),
     path('gallery',views.gallery,name='gallery'),
+    path('blogdetail',views.blogdetail,name='blogdetail'),
+    path('bloggrid',views.bloggrid,name='bloggrid'),
 ]
