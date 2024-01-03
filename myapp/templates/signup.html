@@ -24,7 +24,7 @@
               {% if msg %}
                 <b style="color:skyblue;">{{msg}}</b>
               {% endif %}
-              <form name="signup" method="post" action="{% url 'signup' %}">
+              <form name="signup" method="post" action="{% url 'signup' %}" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="control-group">
                   <input
@@ -94,6 +94,16 @@
                     id="name"
                     placeholder="Confirm Password"
                     name="cpassword"
+                  />
+                  <p></p>
+                </div>
+
+                 <div class="control-group">
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="name"
+                    name="profile_pic"
                   />
                   <p></p>
                 </div>

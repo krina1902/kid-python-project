@@ -1,0 +1,69 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    </head>
+
+  <body>
+    
+        <!-- Contact Start -->
+    <div class="container-fluid pt-5">
+      <div class="container">
+        <div class=" pb-2">
+          <p class="section-title px-5">
+            <span class="px-2">Login Page</span>
+          </p>
+          <h1 class="mb-4">Login</h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-7 ">
+            <div class="contact-form">
+              <div id="success"></div>
+              {% if msg %}
+                <b style="color:skyblue;">{{msg}}</b>
+              {% endif %}
+              <form name="login" method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                
+                <div class="control-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter Email"
+                    name="email"
+                    data-validation-required-message="Please enter your email"
+                  />
+                  <p></p>
+                 <div class="control-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="name"
+                    placeholder="Password"
+                    name="password"
+                  />
+                  <p></p>
+                </div>
+                
+                  <button
+                    class="btn btn-primary py-2 px-4"
+                  
+                    id="sendMessageButton"
+                  >
+                    Login
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+    <!-- Contact End -->
+
+    {% endblock %}
+  </body>
+</html>

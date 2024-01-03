@@ -10,4 +10,10 @@ urlpatterns = [
     path('blogdetail',views.blogdetail,name='blogdetail'),
     path('bloggrid',views.bloggrid,name='bloggrid'),
     path('signup',views.signup,name='signup'),
+    path('login',views.login,name='login'),
+    path('logout',views.logout,name='logout'),
+    path('changepassword',views.changepassword,name='changepassword'),
+
+
+
 ]

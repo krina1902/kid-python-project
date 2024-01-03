@@ -81,9 +81,16 @@
             </div>
             <a href="contact.html" class="nav-item nav-link">Contact</a>
           </div>
-          <a href="{% url 'signup' %}" class="btn btn-primary px-4 mr-2">Sign Up</a>
-          <a href="" class="btn btn-primary px-4">Login</a>
+          {% if request.session.email %}
+             <a href="{% url 'changepassword' %}" class="btn btn-primary px-4 mr-2">Change Password</a>
+             <a href="{% url 'logout' %}" class="btn btn-primary px-4">Logout [{{request.session.fname}}]</a>
+             <a href="{% url 'logout' %}" class=" px-4"><img src="{{request.session.profile_pic}}" width="30px" height="30px"></a>
 
+          {% else %}
+
+            <a href="{% url 'signup' %}" class="btn btn-primary px-4 mr-2">Sign Up</a>
+            <a href="{% url 'login' %}" class="btn btn-primary px-4">Login</a>
+          {% endif %}
         </div>
           </div>
         </div>
